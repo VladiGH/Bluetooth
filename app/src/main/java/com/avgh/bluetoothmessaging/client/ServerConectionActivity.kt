@@ -2,6 +2,7 @@ package com.avgh.bluetoothmessaging.client
 
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -24,11 +25,21 @@ class ServerConectionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_server_conection)
 
+
+    }
+
+    fun comprobarBT(){
         bTAdapter = BluetoothAdapter.getDefaultAdapter()
 
         if(bTAdapter == null){
             Toast.makeText(this,  "Su dispositivo no cuenta con tecnologia Bluetooth", Toast.LENGTH_LONG).show()
         }
-        else if(!bTAdapter!!)
+        else if(!bTAdapter!!.isEnabled){
+            val bTIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
+            startActivityForResult(bTIntent, R_ENABLE_BLUETOOTH)
+        }
+
+
+
     }
 }
