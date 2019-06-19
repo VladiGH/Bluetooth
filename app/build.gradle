@@ -35,10 +35,10 @@ android {
 }
 
 dependencies {
-    def room="2.1.0-beta01"
-    def coroutines="1.2.0"
-    def archLifecycleVersion="2.2.0-alpha01"
-    def androidxArchVersion= "2.0.0"
+    def room = "2.1.0-beta01"
+    def coroutines = "1.2.0"
+    def archLifecycleVersion = "2.2.0-alpha01"
+    def androidxArchVersion = "2.0.0"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
