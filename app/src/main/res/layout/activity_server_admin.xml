@@ -9,7 +9,8 @@
         android:background="#303030">
 
     <ImageView
-            android:id="@+id/serverOn"
+            android:id="@+id/circler"
+            android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/aspen_bar"
@@ -32,17 +33,20 @@
             android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="@+id/serverOn"/>
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <ToggleButton
+            android:id="@+id/activator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="@+id/serverOn"
+            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginBottom="8dp"
             android:textColor="#fff"
-            app:layout_constraintBottom_toBottomOf="@+id/serverOn"
-            app:layout_constraintStart_toStartOf="@+id/serverOn"
-            app:layout_constraintEnd_toEndOf="@+id/serverOn"
+            android:textOff="@string/off"
+            android:textOn="@string/on"
+            app:layout_constraintBottom_toBottomOf="@+id/circler"
+            app:layout_constraintStart_toStartOf="@+id/circler"
+            app:layout_constraintEnd_toEndOf="@+id/circler"
             android:background="@drawable/ic_hexagon"/>
 
     <ImageView
@@ -50,7 +54,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_electronic_detail"
             android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/serverOn"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
@@ -71,7 +75,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_circuit_print"
             android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/serverOn"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
