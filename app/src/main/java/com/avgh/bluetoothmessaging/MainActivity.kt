@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //TODO: ACA ESTA PARCIALMENTE EL SERVIDOR PARA BLUETOOTH
     private inner class AcceptThread : Thread() {
 
         private val mmServerSocket: BluetoothServerSocket?
@@ -59,8 +60,8 @@ class MainActivity : AppCompatActivity() {
 
                 // If a connection was accepted
                 if (socket != null) {
-                    //todo:  Do work to manage the connection (in a separate thread) justo lo de abajo
-                    //manageConnectedSocket(socket)
+                    //todo:  Do work to manage the connection (in a separate thread) HACER LA FUNCION
+                    manageConnectedSocket(socket)
                     mmServerSocket.close()
                     break
                 }
@@ -75,6 +76,9 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+    }
+    fun manageConnectedSocket(socket: BluetoothSocket){
+        
     }
 
 
