@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.avgh.bluetoothmessaging.R
-import com.google.android.material.snackbar.Snackbar
 
 class ServerConectionActivity : AppCompatActivity() {
 
