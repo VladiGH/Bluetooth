@@ -10,6 +10,8 @@ import com.google.android.material.snackbar.Snackbar
 import java.util.*
 import android.bluetooth.BluetoothSocket
 import android.bluetooth.BluetoothServerSocket
+import com.avgh.bluetoothmessaging.client.ServerConectionActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
 
 
@@ -26,8 +28,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ServerAdmin::class.java))
         }
         if (mBluetoothAdapter == null){
-            Snackbar.make(findViewById<Button>(R.id.test),"Sorry, bro no soportas bluetooth", Snackbar.LENGTH_LONG).show()
+            Snackbar.make(findViewById<Button>(R.id.test),"Su dispositivo no soprta Bluetooth", Snackbar.LENGTH_LONG).show()
         }
+        btn_join_bt_server.setOnClickListener{
+            startActivity(Intent(this, ServerConectionActivity::class.java))
+        }
+
     }
 
     //TODO: ACA ESTA PARCIALMENTE EL SERVIDOR PARA BLUETOOTH
